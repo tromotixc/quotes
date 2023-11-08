@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <body style="background-color: #d8e4f8; text-align: center; width: 900px; max-width: 80%; margin:auto;">
+        <br><br><br><br>
+        <div style="display: grid; grid-template-columns: auto auto auto auto; padding: 10px;">
+            <div style="display: flex; justify-content: center; align-items: center;"><img src="https://i.ibb.co/xg7qhZt/alb-tippek-logo-easy.png" alt="tippek" style="width: 100px; margin: auto;"></div>
+            <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.luxuryrentals.hu/theme/Indoors/img/logo-flat.jpg" alt="tippek" style="width: 100px; margin: auto;"></div>
+            <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.budapestexpats.com/theme/Indoors/img/logo.png" alt="tippek" style="width: 100px; margin: auto;"></div>
+            <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.indoorsbudapest.hu/theme/indoors/img/logo-white.png" alt="tippek" style="width: 100px; background-color: #2f2d97; border-radius: 20%; padding: 20px; margin: auto;"></div>
+        </div>
+        <br>
+        <div style="color: #0a094e; font-size: 40px; font-weight: 800; padding: 100px; margin: auto; max-width: 70%;" id="text-display"></div>
+    
+    
+    <script>
+            function typeText() {
+                var texts = [
+                "Ez a nap más mint a többi, ezt te is jól tudod. Másként kelt fel reggel a nap és másként járt a hold.",
+                "A siker nem azoknak jár, akik csak álmodoznak róla. A siker azoknak jár, akik felkelnek és megteszik érte a szükséges lépéseket.",
+                "Ha mindenki úgy tösz, ahogy tönni köll, akkó minden. úgy lössz, ahogy lönni köll.",
+                "A mai nap a te napod lehet. Készen állsz arra, hogy meghódítsd a világot?",
+                "Mindig emlékezz, hogy a legnagyobb eredmények apró lépésekkel kezdődnek.",
+                "Soha ne add fel; minden nehézségben egy új lehetőség rejtőzik.",
+                "Bátorítsd magad minden nap, mert te vagy a legnagyobb inspiráció.",
+                "Higgy magadban, és ne hagyd, hogy mások határozzák meg a sorsodat.",
+                "Az akadályok csak arra szolgálnak, hogy erősebbé tegyenek téged.",
+                "Ne várj a tökéletes pillanatra; ragadd meg a pillanatot és tedd tökéletessé.",
+                "\"Az élet nem arról szól, hogy várakozunk a vihar elmúltára, hanem arról, hogy megtanuljunk táncolni az esőben.\" – Vivian Greene",
+                "\"Az élet olyan, mint biciklizni. Az egyensúly megőrzéséhez mozgásban kell maradnod.\" – Albert Einstein",
+                "\"Az igazi bátorság nem az, hogy nem félünk, hanem az, hogy legyőzzük a félelmeinket.\" – Nelson Mandela",
+                "\"A boldogság nem a véletlen műve, hanem a saját döntéseink és cselekedeteink eredménye.\" – Eleanor Roosevelt",
+                "\"A kudarc a siker elengedhetetlen része; ha nem kockáztatsz kudarcot, akkor nem kockáztatsz sikert sem.\" – J.K. Rowling",
+                "\"A legnagyobb hiba, amit elkövethetünk, az a félelem, hogy hibázunk.\" – John C. Maxwell",
+                "Csodálatos ember vagy, aki inspirál másokat azzal, hogy ki vagy és mit teszel.",
+                "Nagyszerű vagy abban, amit csinálsz, és minden nap hozzájárulsz a világ jobbá tételéhez.",
+                "Emlékezz, hogy te egy erős, csodálatos és nagyszerű ember vagy, aki képes bármit elérni.",
+                "Nagyszerű képességeid és erős karaktered inspirációként szolgálnak mindenki számára, aki ismer téged",
+                "Te vagy az az erős és csodálatos ember, aki bármit elérhet, amit csak elhatároz.",
+                "Minden napod bizonyíték arra, hogy te egy erős, csodálatos és rendkívüli ember vagy.",
+                "Nem csak erős és csodálatos vagy, hanem egy olyan ember, aki képes inspirálni és motiválni másokat",
+                "A belső erőd és a pozitív hozzáállásod tesz téged azzá a csodálatos és nagyszerű emberé, aki vagy.",
+                "Ne feledd, te egy erős, csodálatos és különleges ember vagy, akinek hatalma van a saját sorsa formálására.",
+                "Emlékezz, hogy mint ingatlanos, te rendkívüli erővel bírsz, hogy emberek életét pozitívan befolyásold.",
+                "Mint ingatlanos, te rendelkezel azzal a különleges képességgel, hogy minden ügymenetet sikeressé tegyél.",
+                "Az ingatlanpiac kihívásai csak még erősebbé és tapasztaltabbá tesznek téged mint ingatlanost.",
+                "Te egy nagyszerű ingatlanos vagy, aki mindig megtalálja a tökéletes megoldást ügyfelei számára.",
+                "Minden sikeres üzlettel bebizonyítod, hogy te egy igazán csodálatos és tehetséges ingatlanos vagy.",
+                "Mint ingatlanos, te vagy az a híd, ami az emberek otthoni álmait a valósággal köti össze.",
+                "A te erősséged és szakértelmed a kulcsa annak, hogy az emberek megtalálják álmaik otthonát.",
+                "Minden egyes kiadott ingatlan egy újabb bizonyíték a tehetségedre és a csodálatos munkádra.",
+                "Emlékezz, hogy mint ingatlanos, különleges képességgel rendelkezel: emberek életét változtatod meg az otthonokkal, amiket találsz számukra.",
+                "Nagyszerű vagy abban, amit csinálsz; minden üzlettel új lehetőségeket és reményeket teremtesz.",
+                "Az ingatlan világában te vagy az a fény, ami az útjukat világítja meg azoknak, akik otthont keresnek.",
+                "Mint ingatlanos, rendkívüli tehetséged van ahhoz, hogy az emberek életében pozitív változást hozz létre."
+                ];
+
+                var text = texts[Math.floor(Math.random() * texts.length)];
+      
+                var textDisplay = document.getElementById("text-display");
+      
+                var typingSpeed = 90;
+      
+                for (var i = 0; i < text.length; i++) {
+                    setTimeout(function(i) {
+                    if (text.charAt(i) == "\n") {
+                        textDisplay.innerHTML += "<br>";
+                    } else {
+                        textDisplay.innerHTML += text.charAt(i);
+                    }
+                    }, typingSpeed * i, i);
+                }
+            }
+      
+            window.addEventListener('load', typeText);
+      </script>
+    
+    
+    </body>
+</html>
