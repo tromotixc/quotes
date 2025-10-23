@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDUL A NAP 🥳</title>
     <style>
-        /* Alapvető stílus a teljes képernyős megjelenítéshez és a csúszka eltávolításához */
         body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
             width: 100vw;
-            /* Megakadályozza a vízszintes csúszka megjelenését */
             overflow-x: hidden; 
         }
 
-        /* Fő konténer: Flexbox használata a függőleges és vízszintes középre igazításhoz */
         .center-container {
             min-height: 100vh; 
             width: 100%;
@@ -26,7 +23,6 @@
             box-sizing: border-box; /* Biztosítja, hogy a padding ne okozzon túlnyúlást */
         }
 
-        /* Logókat tartalmazó grid finomhangolása */
         .logo-grid {
              display: grid; 
              grid-template-columns: auto auto auto auto; 
@@ -35,7 +31,6 @@
              max-width: 90%; /* Megakadályozza a túlnyúlást kisebb képernyőn */
         }
         
-        /* Szövegblokk stílusa */
         #text-display {
             color: #0a094e; 
             font-size: 40px; 
@@ -46,7 +41,6 @@
             text-align: center; 
         }
         
-        /* Képek stílusa a flexibilis elrendezéshez */
         .logo-grid img {
             max-width: 100px; 
             height: auto;
