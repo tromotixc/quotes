@@ -1,22 +1,16 @@
 
 <style>
-    /* 1. CSS a központi elhelyezéshez */
     .center-container {
-        /* A teljes képernyő méretét foglalja el a viewport-on belül */
         min-height: 100vh; 
         width: 100%;
         
-        /* Flexbox használata a középre igazításhoz */
         display: flex;
-        /* Függőleges irányú elrendezés (oszlop) */
         flex-direction: column; 
-        /* Vízszintes középre igazítás */
         align-items: center; 
-        /* Függőleges középre igazítás (ha a tartalom nem tölti ki a teljes magasságot) */
         justify-content: center; 
     }
 
-    /* A szövegblokk további finomhangolása */
+
     #text-display {
         color: #0a094e; 
         font-size: 40px; 
@@ -24,12 +18,9 @@
         padding: 100px; 
         margin: auto; 
         max-width: 70%;
-        /* Fontos: A margin: auto itt már felesleges a Flexbox miatt, de megtartjuk a max-width miatt. */
-        text-align: center; /* Ha a szöveg rövid, a megjelenítéshez központosítsuk */
+        text-align: center;
     }
 
-    /* Ezt a stílust eltávolítottam, mert a <br> tag-ek túl sok üres helyet hagytak volna */
-    /* br { display: none; } */
 </style>
 
 <div class="center-container">
@@ -41,7 +32,7 @@
         <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.indoorsbudapest.hu/theme/indoors/img/logo-white.png" alt="tippek" style="width: 100px; background-color: #2f2d97; border-radius: 20%; padding: 20px;"></div>
     </div>
     
-    <div id="text-display">Ez a szövegmező is középre került!</div>
+    <div id="text-display"></div>
     
 </div>
     
