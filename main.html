@@ -1,40 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDUL A NAP 🥳</title>
+    <style>
+        /* Alapvető stílus a teljes képernyős megjelenítéshez és a csúszka eltávolításához */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            width: 100vw;
+            /* Megakadályozza a vízszintes csúszka megjelenését */
+            overflow-x: hidden; 
+        }
 
-<style>
-    .center-container {
-        min-height: 100vh; 
-        width: 100%;
+        /* Fő konténer: Flexbox használata a függőleges és vízszintes középre igazításhoz */
+        .center-container {
+            min-height: 100vh; 
+            width: 100%;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; /* Vízszintes középre igazítás */
+            justify-content: center; /* Függőleges középre igazítás */
+            box-sizing: border-box; /* Biztosítja, hogy a padding ne okozzon túlnyúlást */
+        }
+
+        /* Logókat tartalmazó grid finomhangolása */
+        .logo-grid {
+             display: grid; 
+             grid-template-columns: auto auto auto auto; 
+             padding: 10px;
+             gap: 20px; /* Hozzáadtuk a rést a képek között */
+             max-width: 90%; /* Megakadályozza a túlnyúlást kisebb képernyőn */
+        }
         
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        justify-content: center; 
-    }
+        /* Szövegblokk stílusa */
+        #text-display {
+            color: #0a094e; 
+            font-size: 40px; 
+            font-weight: 800; 
+            padding: 100px; 
+            margin-top: 20px; /* Elválasztó térköz a logóktól */
+            max-width: 70%;
+            text-align: center; 
+        }
+        
+        /* Képek stílusa a flexibilis elrendezéshez */
+        .logo-grid img {
+            max-width: 100px; 
+            height: auto;
+        }
+        
+    </style>
+</head>
+<body>
 
-
-    #text-display {
-        color: #0a094e; 
-        font-size: 40px; 
-        font-weight: 800; 
-        padding: 100px; 
-        margin: auto; 
-        max-width: 70%;
-        text-align: center;
-    }
-
-</style>
-
-<div class="center-container">
-    
-    <div style="display: grid; grid-template-columns: auto auto auto auto; padding: 10px; gap: 20px;">
-        <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.alberlettippek.hu/uploads/static/blogba/alb-tippek-logo_easy.png" alt="tippek" style="width: 100px;"></div>
-        <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.luxuryrentals.hu/theme/Indoors/img/logo-flat.jpg" alt="tippek" style="width: 100px;"></div>
-        <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.budapestexpats.com/theme/Indoors/img/logo.png" alt="tippek" style="width: 100px;"></div>
-        <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.indoorsbudapest.hu/theme/indoors/img/logo-white.png" alt="tippek" style="width: 100px; background-color: #2f2d97; border-radius: 20%; padding: 20px;"></div>
+    <div class="center-container">
+        
+        <div class="logo-grid">
+            <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.alberlettippek.hu/uploads/static/blogba/alb-tippek-logo_easy.png" alt="tippek"></div>
+            <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.luxuryrentals.hu/theme/Indoors/img/logo-flat.jpg" alt="tippek"></div>
+            <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.budapestexpats.com/theme/Indoors/img/logo.png" alt="tippek"></div>
+            <div style="display: flex; justify-content: center; align-items: center;"><img src="https://www.indoorsbudapest.hu/theme/indoors/img/logo-white.png" alt="tippek" style="background-color: #2f2d97; border-radius: 20%; padding: 20px;"></div>
+        </div>
+        
+        <div id="text-display"></div>
+        
     </div>
-    
-    <div id="text-display"></div>
-    
-</div>
+
+
     
     <script>
             function typeText() {
@@ -136,5 +171,6 @@
             window.addEventListener('load', typeText);
       </script>
     
-    
+</body>
+</html>    
 
